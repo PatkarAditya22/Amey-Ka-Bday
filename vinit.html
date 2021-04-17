@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinit</title>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body style="overflow-x: hidden;">
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(4, 0, 255);">Wrong Guess</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1 style="color: #0f9b0f;">Kya bhai Itna bhi nai guess kar sakta kya??</h1>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <section class="terminal" data-aos="fade-right" style="width: 100%;height:100% !important;padding:10px;">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title" style="font-size:8vw;font-family: Lucida Handwriting;color: white;">Vinit Dipali</h1>
+                <div class="container">
+                    <iframe style="width: 100%;height: 500px" class="responsive-iframe"
+                        src="Videos/Vinit-dipali.mp4"></iframe>
+                </div>
+                <br>
+                <p class="button is-danger is-outlined" style="font-size: 4vw;color: white;">Next Hint : He is your friend who has not given a SINGLE PARTY
+                    🤣</p>
+                <br>
+                <div class="form-group">
+                    <input style="padding: 10px;font: 3vw cursive;" type="email" class="form-control" id="lang"
+                        placeholder="Enter The name of the person" name="lang" required>
+                </div>
+                <br>
+                <button onclick="check()" style="font-size:3vw;border-radius: 10px" class="btn btn-danger is-outlined"
+                    id='submit'>Sure
+                    hai? Toh click here</button>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    AOS.init({
+        duration: 1200,
+    })
+
+    function check() {
+        var lang = document.getElementById('lang').value.toLowerCase();
+        if (lang == 'bhushan') {
+            window.open('https://amey-ka-bday.netlify.app/bhushan.html', '_self');
+            document.getElementById('lang').value = ''
+        } else {
+            document.getElementById('lang').value = '';
+            swal("Wrong guess!", "Kya bhai itna bhi nahi Pata ??!", "error");
+        }
+    }
+</script>
+<style>
+    .ui {
+        background: #0f0c29;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .terminal {
+        background: #000000;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #0f9b0f, #000000);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #0f9b0f, #000000);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+</style>
+
+</html>

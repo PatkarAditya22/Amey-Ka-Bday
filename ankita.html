@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js">
+    </script>
+    <title>Ankita</title>
+</head>
+
+<body>
+    <section class="termi" style="margin-top: -100px; margin-bottom: 100px;">
+        <div class="terminal">
+            <p id="term">Ankita's Terminal v0.2<br>
+                This Terminal is made especially for You❤ (I hope uk😂)<br>
+                Copyleft &copy;2021, Happy Birthday-Amey😂 Inc.<br>
+            </p>
+        </div>
+    </section>
+    <section class="example ui">
+        <audio id="myAudio">
+            <source src="hbd.mpeg" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p style="color: azure;font-size: 1.5em;">Gaana pause karna ho toh daba isko🙊 </p>
+        <div style="display: flex;justify-content: center;">
+            <button style="margin:5px" class="btn btn-info" onclick="startAudio()" type="button">Play </button>
+            <button style="margin:5px" class="btn btn-info" onclick="pauseAudio()" type="button">Pause </button>
+        </div>
+    </section>
+    <section style="margin-top: 1500px;">
+        <div class="card1">
+            <div class="back"></div>
+            <div class="front">
+                <div class="imgset">
+                    <img width="100%"
+                        src="https://1.bp.blogspot.com/-Mgj9-rbs65E/XfMoPSD5gtI/AAAAAAAAURk/NBokE2gSS2cTSJ2em5lZ5hJDuTtRN7UVwCLcBGAsYHQ/s1600/2713997.png">
+                </div>
+            </div>
+            <div class="text-container">
+                <p id="head">Happy Birthday Amey!</p>
+                <p>I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot.
+                    Enjoy!</p>
+                <p>Hope your day goes great!</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <script>
+        AOS.init({
+            duration: 1200,
+        })
+        var x = document.getElementById("myAudio");
+
+        window.onload = function () {
+            x.play();
+        }
+
+        function startAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        }
+    </script>
+    <script type="text/javascript">
+        var vue_det = new Vue({
+            el: '#intro',
+            data: {
+                message: 'My first VueJS Task'
+            },
+        });
+    </script>
+    <script>
+        CURSOR = '';
+        randomWait = function (min, max) {
+            return Math.ceil(Math.random() * (max - min) + min);
+        };
+        typeLine = function (elem, line, index) {
+            index = (index != null) ? index : 0;
+            content = elem.innerHTML.substring(
+                0, elem.innerHTML.length - CURSOR.length);
+            char = line.charAt(index);
+            if (char === "$") {
+                elem.innerHTML = content +
+                    '<br>root@Ankita-Lad.in:/AP/build$' +
+                    CURSOR;
+            } else if (char === "~") {
+                elem.innerHTML = content + '<br><br>' + CURSOR;
+            } else {
+                elem.innerHTML = content + char + CURSOR;
+            }
+            if (line.length > index) {
+                setTimeout(function () {
+                    typeLine(elem, line, index + 1);
+                }, randomWait(50, 100));
+            } else {
+                elem.innerHTML = elem.innerHTML.substring(
+                    0, elem.innerHTML.length - CURSOR.length);
+            }
+        };
+        elem = document.getElementById("term");
+        line =
+            "$ ./cv --new 'AP-happyBirthdayAmey'$./cv --add 'amey.txt' 'hbd.txt' 'Ankita.txt''cont.txt'$ ./cv--compile ~Compiling Happy Birthday Amey... ~Writing PDF... ~ Hello Navroba❤️😂😂😂~wishing you a very happy birthday.. ~ stay blessed & stay healthy🤭~Many many happy returns of the day babu😂~May all ur dreams come true & you get more happiness & success~Yessssss U turned 30 today...~but I wish u keep looking dis kool & handsome forever😂...~Thank you so much for caring & loving me alot...~Thank you 4 being my Aai Baba❤😍..!!~ I remember d day, wen I lost Aai Baba & u holded me so tight just to make me believe I m not alone...~Apne kaafi memories hai and i want woh apne mein hi rahe..~Thank u for understanding me & bearing me in those dark nights...& Thank u 4 being my strength Amey...Love you alot❤️🥰😘😚~Tere bare me jitna bolu kam hi hai..🙈❤️~ Tu hamesha mere side se stand leta hai🥰~Stay happy always❤️❤️😍~Once again happy birthday❤️❤️~$exit &&redirect~Exiting,Byee...";
+        typeLine(elem, line);
+    </script>
+</body>
+<style>
+    body {
+        background: #0f0c29;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .example {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .ui {
+        background: #0f0c29;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .card1 {
+        position: relative;
+        width: 300px;
+        height: 425px;
+        border: 10px solid #9612eb;
+        margin: 60px auto 0 auto;
+        box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)),
+            url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        background-color: #e6f0e6;
+    }
+
+    .card1 .text-container {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+    }
+
+    .strikethrough {
+        text-decoration: line-through;
+    }
+
+    .card1 .text-container #head {
+        font-family: 'Nobile', sans-serif;
+        font-size: 1.5em;
+        margin: 60px auto 60px auto;
+    }
+
+    .card1 p {
+        font-size: 1.1em;
+        line-height: 1.4;
+        font-family: 'Nobile';
+        color: #331717;
+        font-style: italic;
+        text-align: center;
+        margin: 30px auto 0px auto;
+    }
+
+    .card1 .front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: -10px 0px 0px -10px;
+        border: 10px solid #9612eb;
+        backface-visibility: hidden;
+        background-color: #9612eb;
+        /* background-image: url($cover-image);
+    */
+        background-size: contain;
+        transform-style: preserve-3d;
+        transform-origin: 0% 50%;
+        transform: perspective(800px) rotateY(0deg);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .card1:hover .front {
+        transform: perspective(800px) rotateY(-170deg);
+        background-color: #41718d;
+    }
+
+    .card1:hover .back {
+        transform: perspective(800px) rotateY(-170deg);
+        box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        background-color: #d2dcd2;
+    }
+
+    .card1 .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #9612eb;
+        margin: -10px 0px 0px -10px;
+        backface-visibility: visible;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+        transform-style: preserve-3d;
+        transform-origin: 0% 50%;
+        transform: perspective(800px) rotateY(0deg);
+        transition: all 0.8s ease-in-out;
+        background-color: #e6f0e6;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .imgset {
+        position: relative;
+        z-index: 1;
+        margin-bottom: -215px;
+    }
+
+    .imgset img {
+        box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+    }
+</style>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:600");
+
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .terminal,
+    .terminal:before,
+    .terminal:after,
+    p:after {
+        position: absolute;
+    }
+
+    .terminal {
+        margin: 30px;
+        height: 190vh;
+        width: 60vw;
+        margin: 20vh 20vw;
+        padding: 26px 4px 4px;
+        border-radius: 5px;
+        background: linear-gradient(#f6f6f6, #d3d3d3 20px, #7e7e7e 20px, #7e7e7e 21px, #393456 21px);
+        -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .terminal:before {
+        width: 10px;
+        height: 10px;
+        margin: -20px 0 0 5px;
+        border-radius: 5px;
+        background: #fc625d;
+        -webkit-box-shadow: 0 0 0 1px #de413e, 15px 0 #fec041, 15px 0 0 1px #dda035, 30px 0 #35cc4b, 30px 0 0 1px #28aa36;
+        box-shadow: 0 0 0 1px #de413e, 15px 0 #fec041, 15px 0 0 1px #dda035, 30px 0 #35cc4b, 30px 0 0 1px #28aa36;
+    }
+
+    .terminal:after {
+        width: 100%;
+        content: "CV Manager - root@Ankita-Lad.in";
+        top: 0;
+        text-align: center;
+        color: #4c4c4c;
+        line-height: 20px;
+    }
+
+    p {
+        color: #fff;
+    }
+
+    p:before {
+        margin-right: 8px;
+        opacity: 0.5;
+        line-height: 18px;
+    }
+
+    p:after {
+        content: ' ';
+        -webkit-animation: blink 1s linear 1s infinite;
+        animation: blink 1s linear 1s infinite;
+        width: 8px;
+        height: 18px;
+        margin-left: 1px;
+        background: #fec041;
+    }
+
+    @-webkit-keyframes blink {
+        0% {
+            background: rgba(254, 192, 65, 0);
+        }
+
+        50% {
+            background: rgba(254, 192, 65, 0);
+        }
+
+        51% {
+            background: #fec041;
+        }
+
+        100% {
+            background: #fec041;
+        }
+    }
+
+    @keyframes blink {
+        0% {
+            background: rgba(254, 192, 65, 0);
+        }
+
+        50% {
+            background: rgba(254, 192, 65, 0);
+        }
+
+        51% {
+            background: #fec041;
+        }
+
+        100% {
+            background: #fec041;
+        }
+    }
+</style>
+
+</html>

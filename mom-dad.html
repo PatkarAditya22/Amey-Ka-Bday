@@ -21,11 +21,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patkars</title>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body style="overflow-x: hidden;">
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -43,17 +44,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <section class="terminal" data-aos="fade-right" style="width: 100%;height:100% !important;padding:10px;">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title" style="font-size:8vw;font-family: Lucida Handwriting;color: white;">Patkar's</h1>
                 <div class="container">
-                    <iframe style="width: 100%;height: 500px" class="responsive-iframe" src="Videos/denaz.mp4"></iframe>
+                    <iframe style="width: 100%;height: 500px" class="responsive-iframe" src="Videos/Mom-dad.mp4"></iframe>
                 </div>
                 <br>
-                <p class="button is-danger is-outlined" style="font-size: 4vw;color: white;">Next Hint : They are
-                    Ankita's Parents. Guess their surname</p>
+                <p class="button is-danger is-outlined" style="font-size: 4vw;color: white;">Next Hint : Your Office friend rhyming with Thailand</p>
                 <br>
                 <div class="form-group">
                     <input style="padding: 10px;font: 3vw cursive;" type="email" class="form-control" id="lang"
@@ -61,7 +61,7 @@
                 </div>
                 <br>
                 <button onclick="check()" style="font-size:3vw;border-radius: 10px" class="btn btn-danger is-outlined"
-                    data-toggle="modal" data-target="#exampleModal" id='submit'>Sure
+                id='submit'>Sure
                     hai? Toh click here</button>
             </div>
         </div>
@@ -74,11 +74,12 @@
 
     function check() {
         var lang = document.getElementById('lang').value.toLowerCase();
-        if (lang == 'denaz') {
-            window.open('https://amey-ka-bday.netlify.app/mom-dad.html', '_self');
+        if (lang == 'ryland') {
+            window.open('https://amey-ka-bday.netlify.app/ryland.html', '_self');
             document.getElementById('lang').value = ''
         } else {
-            document.getElementById('lang').value = ''
+            document.getElementById('lang').value = '';
+            swal("Wrong guess!", "Kya bhai itna bhi nahi Pata ??!", "error");
         }
     }
 </script>

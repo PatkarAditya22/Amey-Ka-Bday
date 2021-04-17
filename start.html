@@ -21,6 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <script>
@@ -84,10 +85,11 @@
     function check() {
         var lang = document.getElementById('lang').value.toLowerCase();
         if (lang == 'katy') {
-            window.open('https://amey-ka-bday.netlify.app/katy.html', '_self');
+            swal("Good Job!", "Sahi guess karliya Bhai!!","success");
+            window.open('katy.html', '_self');
             document.getElementById('lang').value = ''
         } else {
-            alert('Kya bhai itna bhi nahi ata kya?')
+            swal("Wrong guess!", "Kya bhai itna bhi nahi Pata ??!", "error");
             document.getElementById('lang').value = ''
         }
     }
