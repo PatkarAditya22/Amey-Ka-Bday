@@ -2,9 +2,13 @@
 <html>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js">
+</script>
 <title>Amey Ka Bday</title>
 <script>
     function goto(idx) {
@@ -16,36 +20,35 @@
     }
 </script>
 
+<script>
+    window.onload = function () {
+        var x = document.getElementById("my-Audio").play();
+    }
+
+    function startAudio() {
+        document.getElementById("my-Audio").play();
+    }
+</script>
+
 <body>
+    <audio id="my-Audio">
+        <source src="hbd.mpeg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <nav class="navbar" role="navigation" aria-label="main navigation" style="margin: 1%;">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
                 <button class="button is-info">HAPPY BIRTHDAY AMEY</button>
             </a>
-            <a class="navbar-item" href="#first3"><button class="button is-info">AMEY-ANKI</button></a>
+            <a class="navbar-item" href="#first3"><button class="button is-primary">AMEY-ANKI</button></a>
             <a class="navbar-item" href="#timeline"><button class="button is-success">Timeline</button></a>
             <a class="navbar-item" href="#mba"><button class="button is-warning">MBA</button></a>
             <a class="navbar-item" href="#office"><button class="button is-danger">OFFICE</button></a>
-            <a class="navbar-item" href="start.html"><button class="button is-danger">START</button></a>
+            <a class="navbar-item" href="start.html"><button class="button is-dark">START</button></a>
         </div>
     </nav>
     <div id="container" class="bg" data-aos="fade-right">
         <div id="circle">
-            <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
-                xml:space="preserve">
-                <defs>
-                    <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
-                </defs>
-                <circle cx="150" cy="100" r="75" fill="none" />
-                <g>
-                    <use xlink:href="#circlePath" fill="none" />
-                    <text fill="#ba1b06">
-                        <textPath xlink:href="#circlePath">Happy Birthday Ameyyyaa! We love you!!</textPath>
-                    </text>
-                </g>
-            </svg> -->
-            
         </div>
     </div>
 
@@ -73,6 +76,12 @@
                 width: 100%;
                 height: fit-content;
             }
+        }
+        .example {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
         }
     </style>
 
@@ -602,6 +611,13 @@
     AOS.init({
         duration: 1200,
     })
+
+    function startAudio(){
+    x.play();
+    }
+    function pauseAudio() {
+    x.pause();
+    }
 </script>
 
 </html>
